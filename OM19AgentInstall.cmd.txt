@@ -1,0 +1,8 @@
+msiexec /x "%~dp0OM12R2MOMAgent.msi" /qn /l*v %windir%\temp\OM12R2AgentUninstall.log
+
+REM msiexec /x "%~dp0OM19MOMAgent.msi" /qn /l*v %windir%\temp\OM19AgentUninstall.log
+
+msiexec.exe /i "%~dp0OM19MOMAgent.msi" /qn /l*v %windir%\temp\OM19Agentinstall.log USE_SETTINGS_FROM_AD=0 MANAGEMENT_GROUP="OM19MG" MANAGEMENT_SERVER_DNS=sgw19.sg.contoso.com MANAGEMENT_SERVER_AD_NAME=sgw19.sg.contoso.com ACTIONS_USE_COMPUTER_ACCOUNT=1 USE_MANUALLY_SPECIFIED_SETTINGS=1 NOAPM=1 AcceptEndUserLicenseAgreement=1 
+
+msiexec.exe /update "%~dp0KB4594078-amd64-Agent.msp" /qn /l*v %windir%\temp\OM19UR3Update.log 
+
